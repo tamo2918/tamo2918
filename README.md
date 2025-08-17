@@ -1,23 +1,25 @@
-<p align="left">
-  <a href="https://github.com/tamo2918/tamo2918/">
-    <img src="https://komarev.com/ghpvc/?username=tamo2918" alt="tamo2918" />
-  </a>
-  <a href="http://twitter.com/tamo2918">
-    <img height="20" src="https://img.shields.io/twitter/follow/tamo2918?label=Twitter&logo=twitter&style=flat" />
-  </a>
-  <a href="https://github.com/tamo2918">
-    <img height="20" src="https://img.shields.io/github/followers/tamo2918?label=follow&logo=github&style=flat" />
-  </a>
-  <a href="https://www.reddit.com/user/tamo2918">
-    <img height="20" src="https://img.shields.io/reddit/user-karma/combined/tamo2918?label=Reddit&logo=reddit&style=flat" />
-  </a>
-  <a href="https://stackoverflow.com/users/5720201/tamo2918">
-    <img height="20" src="https://img.shields.io/stackexchange/stackoverflow/r/5720201?label=StackOverflow&logo=stack-overflow&style=flat" />
-  </a>
-  <a href="http://qiita.com/tamo2918">
-    <img height="20" src="https://qiita-badge.apiapi.app/s/tamo2918/posts.svg" />
-  </a>
-  <a href="http://qiita.com/tamo2918">
-    <img height="20" src="https://qiita-badge.apiapi.app/s/tamo2918/contributions.svg" />
-  </a>
-</p>
+
+name: GitHub-Profile-3D-Contrib
+
+on:
+  schedule: # 03:00 JST == 18:00 UTC
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-github-profile-3d-contrib
+    steps:
+      - uses: actions/checkout@v3
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          git commit -m "generated"
+          git push
