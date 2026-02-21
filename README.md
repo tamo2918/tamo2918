@@ -1,5 +1,5 @@
 # 💫 About Me:
-### 👋 Hi, I'm Tatsuki Morita  <br><br>- 🎓 High school student /  Software engineer  <br>- 💻 Building apps with SwiftUI,  and AI  <br>- 📱 Developed apps for task management, note-taking, social networking, and learning support  <br>- 🌱 Interests: AI & sustainability, gadgets & social platforms, human autonomy and AI  <br>- 📝 Currently working on my portfolio site
+### 👋 Hi, I'm Tatsuki Morita  <br><br>- 🎓 High school student
 
 
 ## 🌐 Socials:
