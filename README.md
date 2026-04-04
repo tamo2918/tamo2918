@@ -1,5 +1,5 @@
 # 💫 About Me:
-### 👋 Hi, I'm Tatsuki Morita  <br><br>- 🎓 Kindai Universit student
+### 👋 Hi, I'm Tatsuki Morita  <br><br>- 🎓 Kindai University student
 
 
 ## 🌐 Socials:
